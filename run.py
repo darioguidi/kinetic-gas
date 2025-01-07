@@ -1,16 +1,16 @@
-from src.calculation.boyle import boyleEquationCostant,boyleEquationPressures,boyleEquation
+
+
+from src.calculation.boyle import boyleEquation, boyleEquationCostant, boyleEquationPressures, boyleEquationVolumes
 
 def main():
-    pressures = [10, 20, 30]
-    volumes = [4, 3, 2]
 
+    volumes = [4, 3, 2]
     costant=10
 
-    print(boyleEquationCostant(pressures, volumes))
+    pressures=boyleEquationPressures(costant, volumes)
+    costant2=boyleEquationCostant(pressures, volumes)
 
-    print(boyleEquationPressures(costant, volumes))
-    
-    print(boyleEquationCostant(boyleEquationPressures(costant, volumes), volumes))
+    print(costant2, volumes)
 
 if __name__=="__main__":
     main()

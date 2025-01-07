@@ -1,4 +1,4 @@
-from calculation.boyle import boyleEquationCostant,boyleEquationPressures,boyleEquation
+
 
 def main():
     pressures = [10, 20, 30]
